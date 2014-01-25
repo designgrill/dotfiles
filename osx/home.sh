@@ -3,7 +3,7 @@ ln -s ~/Dropbox/Settings/.ssh ~/.ssh
 chmod -R og-rxw ~/.ssh
 mv ~/.bash_profile ~/.bash_profileOLD
 mv ~/.bash_history ~/.bash_historyOLD
-ln -s ~/Dropbox/Settings/mygola-meenal/.bash_profile ~/.bash_profile
+ln -s ~/Documents/desktop-settings/bash/.bash_profile ~/.bash_profile
 ln -s ~/Dropbox/Settings/mygola-meenal/.bash_history ~/.bash_history
 
 
