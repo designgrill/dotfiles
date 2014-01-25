@@ -12,7 +12,7 @@ curl -Sso ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
-#mv ~/.vimrc ~/.vimrcOLD
-ln -s ~/Dropbox/Settings/.vimrc ~/.vimrc
+mv ~/.vimrc ~/.vimrcOLD
+ln -s ~/Documents/desktop-settings/vim/.vimrc ~/.vimrc
 #mv ~/.subversion ~/.subversionOLD
 #ln -s ~/Dropbox/Settings/.subversion ~/.subversion
