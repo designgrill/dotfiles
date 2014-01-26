@@ -7,4 +7,6 @@ export GREP_OPTIONS='--color=auto'
 # Use Sublime Text as default editor
 export EDITOR='subl -w'
 
-export LC_CTYPE="en_US"
+alias serve='python -m SimpleHTTPServer'
+alias socks='ssh -fND 8888'
+alias reload='source ~/.bash_profile'
