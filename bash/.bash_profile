@@ -7,6 +7,9 @@ export GREP_OPTIONS='--color=auto'
 # Use Sublime Text as default editor
 export EDITOR='subl -w'
 
+# MySQL directories 
+export PATH=$PATH:/usr/local/mysql/bin
+
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
 alias reload='source ~/.bash_profile'
