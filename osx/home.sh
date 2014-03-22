@@ -16,3 +16,5 @@ mv ~/.vimrc ~/.vimrcOLD
 ln -s ~/Documents/desktop-settings/vim/.vimrc ~/.vimrc
 #mv ~/.subversion ~/.subversionOLD
 #ln -s ~/Dropbox/Settings/.subversion ~/.subversion
+
+curl -Sso ~/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
