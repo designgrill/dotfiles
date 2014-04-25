@@ -2,3 +2,4 @@
 * GitGutter
 * SublimeLinter
 * Git
+* Http Requester
