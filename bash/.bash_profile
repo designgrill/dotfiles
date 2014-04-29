@@ -21,3 +21,5 @@ source ~/git-completion.bash
 if [ -f ~/bash_completion/bash_completion ]; then
    source ~/bash_completion/bash_completion
 fi
+
+source ~/.bash_prompt
