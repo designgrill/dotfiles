@@ -7,8 +7,11 @@ export GREP_OPTIONS='--color=auto'
 # Use Sublime Text as default editor
 export EDITOR='subl -w'
 
+#Go Path setup
+export GOPATH=~/Documents/go
+
 # MySQL directories 
-export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/mysql/bin
 
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'

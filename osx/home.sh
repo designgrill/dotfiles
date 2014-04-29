@@ -24,3 +24,5 @@ mv bash_completion ~/
 
 curl -OL https://gist.githubusercontent.com/designgrill/11391669/raw/.bash_prompt
 mv .bash_prompt ~/
+
+mkdir -p ~/Documents/go
