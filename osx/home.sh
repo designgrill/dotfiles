@@ -18,3 +18,6 @@ ln -s ~/Documents/desktop-settings/vim/.vimrc ~/.vimrc
 #ln -s ~/Dropbox/Settings/.subversion ~/.subversion
 
 curl -Sso ~/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+
+curl -0 http://www.caliban.org/files/bash/bash-completion-20060301.tar.gz | tar -zx
+mv bash_completion ~/ 

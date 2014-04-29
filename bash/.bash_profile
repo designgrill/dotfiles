@@ -17,3 +17,7 @@ alias ip="ifconfig -a | perl -nle'/((\d+\.){3}\d+)/ && print \$1'"
 alias eip="curl -s http://ipecho.net/plain | awk '{print $1}'"
 
 source ~/git-completion.bash
+
+if [ -f ~/bash_completion/bash_completion ]; then
+   source ~/bash_completion/bash_completion
+fi
