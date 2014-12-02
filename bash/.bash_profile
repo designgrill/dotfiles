@@ -9,9 +9,13 @@ export EDITOR='subl -w'
 
 #Go Path setup
 export GOPATH=~/Documents/go
+export PATH=$PATH:$GOPATH/bin
 
 # MySQL directories 
-export PATH=$PATH:$GOPATH/bin:/usr/local/mysql/bin
+export PATH=$PATH:/usr/local/mysql/bin
+
+#Android SDK
+export PATH=$PATH:~/sdk/platform-tools:~/sdk/tools
 
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
