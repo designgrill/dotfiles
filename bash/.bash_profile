@@ -15,7 +15,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/mysql/bin
 
 #Android SDK
-export PATH=$PATH:~/sdk/platform-tools:~/sdk/tools
+export ANDROID_HOME=~/sdk/
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
