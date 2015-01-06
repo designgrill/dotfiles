@@ -6,3 +6,4 @@
 * Text Pastry
 * TodoReview
 * Duplicate Same
+* Pretty JSON
