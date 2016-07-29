@@ -20,10 +20,12 @@ ln -s ~/Documents/desktop-settings/vim/.vimrc ~/.vimrc
 curl -Sso ~/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 curl -0 http://www.caliban.org/files/bash/bash-completion-20060301.tar.gz | tar -zx
-mv bash_completion ~/ 
+mv bash_completion ~/
 sudo touch /etc/bash_completion
 
 curl -OL https://gist.githubusercontent.com/designgrill/11391669/raw/.bash_prompt
 mv .bash_prompt ~/
 
 mkdir -p ~/Documents/go
+
+# brew install csshx
