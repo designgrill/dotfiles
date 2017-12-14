@@ -28,4 +28,6 @@ mv .bash_prompt ~/
 
 mkdir -p ~/Documents/go
 
-# brew install csshx
+brew install csshx
+sudo npm install tldr -g
+brew install qpdf
