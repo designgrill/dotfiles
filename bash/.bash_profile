@@ -18,6 +18,12 @@ export PATH=$PATH:/usr/local/mysql/bin
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 
+# Bash Hitory
+export HISTFILE=~/Dropbox/Settings/.bash_history
+# Make the size unlimited
+export HISTSIZE=
+export HISTFILESIZE=
+
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
 alias reload='source ~/.bash_profile'
