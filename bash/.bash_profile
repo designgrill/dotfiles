@@ -5,13 +5,13 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 
 # Use Sublime Text as default editor
-export EDITOR='subl -w'
+export EDITOR='atom'
 
 #Go Path setup
 export GOPATH=~/Documents/go
 export PATH=$PATH:$GOPATH/bin
 
-# MySQL directories 
+# MySQL directories
 export PATH=$PATH:/usr/local/mysql/bin
 
 #Android SDK
@@ -24,26 +24,6 @@ export HISTFILE=~/Dropbox/Settings/.bash_history
 export HISTSIZE=
 export HISTFILESIZE=
 
-alias serve='python -m SimpleHTTPServer'
-alias socks='ssh -fND 8888'
-alias reload='source ~/.bash_profile'
-alias ip="ifconfig -a | perl -nle'/((\d+\.){3}\d+)/ && print \$1'"
-alias eip="curl -s http://ipecho.net/plain | awk '{print $1}'"
-alias sourcetree="open -a SourceTree"
-alias large="find ./ -type f -size +5M -print0 | xargs -0 ls -halt | sort -rn -k5"
-
-unlockpdf() {
-  qpdf --decrypt --password=$2 $1 Unlocked-$1
-}
-
-showcerts() {
-  echo | openssl s_client -showcerts -servername $1 -connect $1:${2:-"443"} 2>/dev/null
-}
-
-compresspdf() {
-    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -dEmbedAllFonts=true -dGrayImageResolution=72 -dColorImageResolution=72 -dColorConversionStrategy=/Gray -dProcessColorModel=/DeviceGray  -dPDFSETTINGS=/${2:-"screen"} -dCompatibilityLevel=1.3 -sOutputFile=Compressed-$1 $1
-}
-
 
 source ~/git-completion.bash
 
@@ -52,3 +32,19 @@ if [ -f ~/bash_completion/bash_completion ]; then
 fi
 
 source ~/.bash_prompt
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/anshul/.sdkman"
+[[ -s "/Users/anshul/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/anshul/.sdkman/bin/sdkman-init.sh"
