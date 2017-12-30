@@ -16,11 +16,16 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
-# sudo scutil --set ComputerName "Anshul's MacBook Pro"
-# sudo scutil --set HostName "Anshuls-MacBook-Pro"
-# sudo scutil --set LocalHostName "Anshuls-MacBook-Pro"
-# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Pro"
+Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "Anshul's MacBook Pro"
+sudo scutil --set HostName "Anshuls-MacBook-Pro"
+sudo scutil --set LocalHostName "Anshuls-MacBook-Pro"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Pro"
+
+# Interface Tweaks (additional - not from mths.be)
+defaults write -g AppleActionOnDoubleClick 'Maximize'
+defaults write -g AppleInterfaceStyle 'Dark'
+
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -175,7 +180,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set language and text formats
@@ -314,9 +319,6 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Disable the warning before emptying the Trash
 #defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-# Don’t Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool false
-
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -354,7 +356,7 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 #defaults write com.apple.dock tilesize -int 36
 
 # Change minimize/maximize window effect
-#defaults write com.apple.dock mineffect -string "scale"
+defaults write com.apple.dock mineffect -string "genie"
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -671,6 +673,8 @@ defaults write com.apple.TextEdit RichText -int 0
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+# Set tab width to 4 instead of the default 8
+defaults write com.apple.TextEdit "TabWidth" '4'
 
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
