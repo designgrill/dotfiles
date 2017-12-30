@@ -1,11 +1,3 @@
-alias serve='python -m SimpleHTTPServer'
-alias socks='ssh -fND 8888'
-alias reload='source ~/.bash_profile'
-alias ip="ifconfig -a | perl -nle'/((\d+\.){3}\d+)/ && print \$1'"
-alias eip="curl -s http://ipecho.net/plain | awk '{print $1}'"
-alias sourcetree="open -a SourceTree"
-alias large="find ./ -type f -size +5M -print0 | xargs -0 ls -halt | sort -rn -k5"
-
 unlockpdf() {
   qpdf --decrypt --password=$2 $1 Unlocked-$1
 }
@@ -16,4 +8,13 @@ showcerts() {
 
 compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -dEmbedAllFonts=true -dGrayImageResolution=72 -dColorImageResolution=72 -dColorConversionStrategy=/Gray -dProcessColorModel=/DeviceGray  -dPDFSETTINGS=/${2:-"screen"} -dCompatibilityLevel=1.3 -sOutputFile=Compressed-$1 $1
+}
+
+youtubeslice() {
+  # 1 - youtubeURL
+  # 2 - starttime
+  # 3 - duration
+  # 4 - filename
+  # 5 - format [18,22]
+  ffmpeg -ss $2 -i $(youtube-dl -f $5 --get-url $1) -t $3 -c:v copy -c:a copy $4.mp4
 }
