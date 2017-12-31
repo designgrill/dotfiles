@@ -17,8 +17,7 @@ brewapps=(
   "brew-cask-completion"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
-  "ffmpeg --with-openssl --with-libvpx"
-  "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+  "findutils --with-default-names" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   "fish"
   "git-extras"
   "git-lfs"
@@ -29,13 +28,11 @@ brewapps=(
   "grep --with-default-names" # Install more recent versions of some macOS tools.
   "httpie"
   "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
-  "imagemagick --with-webp"
   "lua"
   "mas"
   "moreutils" # Install some other useful utilities like `sponge`.
   "mysql"
   "node"
-  "ntfs-3g"
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
   "qcachegrind"
@@ -43,7 +40,6 @@ brewapps=(
   "redis"
   "screen" # Install more recent versions of some macOS tools.
   "ssh-copy-id"
-  "sshfs"
   "stow"
   "tldr"
   "tree"
@@ -76,9 +72,21 @@ for pkg in "${brewappsupgrade[@]}"; do
   brew upgrade ${pkg}
 done
 
-# Switch to using brew-installed bash as default shell
+# Add brew-installed bash as one of the available shells
+# To set it as default, `chsh -s /usr/local/bin/bash`
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo "🤖 adding newly installed bash to the available shells. Passsword might be needed."
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
 fi;
+
+# Add brew-installed fish as one of the available shells
+# To set it as default, `chsh -s /usr/local/bin/fish`
+if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
+  echo "🤖 adding newly installed fish to the available shells. Passsword might be needed."
+  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
+fi;
+
+# Set the new bash as the default shell (or change it to be fish)
+chsh -s /usr/local/bin/bash
 
 brew cleanup

@@ -1,2 +1,3 @@
 vim/.vim/autoload/pathogen.vim
 vim/.vim/bundle/vim-colors-solarized/
+*.log

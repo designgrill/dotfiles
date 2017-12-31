@@ -2,6 +2,7 @@
 
 # Get the remaining ones from Homebrew Cask
 brew tap caskroom/cask
+brew tap caskroom/versions
 
 brewcaskapps=(
   adium
@@ -20,13 +21,14 @@ brewcaskapps=(
   google-chrome
   imagealpha
   imageoptim
-  inkscape
   itsycal
   java
+  java8
   marp
   metabase-app
   mysqlworkbench
   openemu
+  osxfuse
   postico
   postman
   skype

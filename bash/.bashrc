@@ -4,9 +4,6 @@ OS=$(uname -s)
 # Tell ls to be colourful
 export CLICOLOR=1
 
-# Tell grep to highlight matches
-export GREP_OPTIONS='--color=auto'
-
 # Use atom as default editor
 export EDITOR='atom'
 
@@ -15,9 +12,16 @@ if [[ $OS == 'Darwin' ]]; then
   # Golang
   mkdir -p ~/Documents/go
   export GOPATH=~/Documents/go
+  # GOROOT-based install location to your PATH:
+  export PATH="$PATH:$(brew --prefix)/opt/go/libexec/bin"
 
   # Android
-  export ANDROID_SDK_ROOT="$(brew --prefix)/android-sdk"
+  export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
+
+  # Core Utils
+  export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+
 elif [[ $OS == 'Linux' ]]; then
   # Golang
   mkdir -p ~/documents/go
