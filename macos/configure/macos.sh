@@ -9,7 +9,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+# Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
@@ -17,10 +17,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Anshul's MacBook Pro"
-sudo scutil --set HostName "Anshuls-MacBook-Pro"
-sudo scutil --set LocalHostName "Anshuls-MacBook-Pro"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Pro"
+scutil --set ComputerName "Anshul's MacBook Pro"
+scutil --set HostName "Anshuls-MacBook-Pro"
+scutil --set LocalHostName "Anshuls-MacBook-Pro"
+defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Pro"
 
 # Interface Tweaks (additional - not from mths.be)
 defaults write -g AppleActionOnDoubleClick 'Maximize'
@@ -424,7 +424,7 @@ ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch
 # Possible values:
 #  0: no-op
 #  2: Mission Control
-#  3: Show application windows
+#  3: Show application windows (Expose)
 #  4: Desktop
 #  5: Start screen saver
 #  6: Disable screen saver
@@ -432,10 +432,10 @@ ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top Right screen corner → Desktop
+# Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 4
 defaults write com.apple.dock wvous-tr-modifier -int 0
-# Top right screen corner → App Expose (Show application Windows)
+# Bottom right screen corner → App Expose (Show application Windows)
 defaults write com.apple.dock wvous-br-corner -int 3
 defaults write com.apple.dock wvous-br-modifier -int 0
 # Bottom left screen corner → Mission Control

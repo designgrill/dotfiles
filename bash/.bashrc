@@ -1,50 +1,47 @@
+# Lets figure out the OS for any OS specific stuff
+OS=$(uname -s)
+
 # Tell ls to be colourful
 export CLICOLOR=1
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# Use Sublime Text as default editor
+# Use atom as default editor
 export EDITOR='atom'
 
-#Go Path setup
-export GOPATH=~/Documents/go
+#Path setup
+if [[ $OS == 'Darwin' ]]; then
+  # Golang
+  mkdir -p ~/Documents/go
+  export GOPATH=~/Documents/go
+
+  # Android
+  export ANDROID_SDK_ROOT="$(brew --prefix)/android-sdk"
+elif [[ $OS == 'Linux' ]]; then
+  # Golang
+  mkdir -p ~/documents/go
+  export GOPATH=~/documents/go
+
+  # Android
+  # @todo
+fi
+
 export PATH=$PATH:$GOPATH/bin
 
-# MySQL directories
-export PATH=$PATH:/usr/local/mysql/bin
-
-#Android SDK
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-
-# Bash Hitory
-export HISTFILE=~/Dropbox/Settings/.bash_history
-# Make the size unlimited
+# Make the Bash History size unlimited
 export HISTSIZE=
 export HISTFILESIZE=
 
+# Get Bash Completion which gives auto completion for 100s of commands including git
 
-source ~/git-completion.bash
+if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+  source "$(brew --prefix)/share/bash-completion/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion;
+fi;
 
-if [ -f ~/bash_completion/bash_completion ]; then
-   source ~/bash_completion/bash_completion
-fi
-
-source ~/.prompt.sh
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 2.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/anshul/.sdkman"
-[[ -s "/Users/anshul/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/anshul/.sdkman/bin/sdkman-init.sh"
+# Source other interesting files
+source ~/.bash/prompt.sh
+source ~/.bash/aliases.sh
+source ~/.bash/functions.sh

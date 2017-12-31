@@ -1,6 +1,6 @@
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
-alias reload='source ~/.bash_profile'
+alias reload='source ~/.bashrc'
 alias ip="ifconfig -a | perl -nle'/((\d+\.){3}\d+)/ && print \$1'"
 alias eip="curl -s http://ipecho.net/plain | awk '{print $1}'"
 alias sourcetree="open -a SourceTree"

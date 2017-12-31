@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 rm -rf /tmp/osx-terminal.app-colors-solarized
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git /tmp/osx-terminal.app-colors-solarized
 
