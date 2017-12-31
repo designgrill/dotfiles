@@ -1,9 +1,6 @@
 # Lets figure out the OS for any OS specific stuff
 OS=$(uname -s)
 
-# Tell ls to be colourful
-export CLICOLOR=1
-
 # Use atom as default editor
 export EDITOR='atom'
 
@@ -21,6 +18,7 @@ if [[ $OS == 'Darwin' ]]; then
   # Core Utils
   export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+  eval "$(dircolors ~/.dircolors)" # https://github.com/seebi/dircolors-solarized/blob/master/dircolors.256dark
 
 elif [[ $OS == 'Linux' ]]; then
   # Golang
