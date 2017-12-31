@@ -11,9 +11,10 @@
 	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
 	trustExitCode = true
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
 [alias]
 	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	create-pull-request = !sh -c 'stash pull-request $0'
