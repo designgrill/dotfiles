@@ -35,6 +35,7 @@ brewapps=(
   "node"
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
+  "proselint"
   "qcachegrind"
   "qpdf"
   "redis"
