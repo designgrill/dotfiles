@@ -55,12 +55,12 @@ for pkg in "${brewcaskapps[@]}"; do
     fi
 done
 
-echo "🤖 installing ${brewcaskappsinstall[@]}"
+echo "⛳️ installing ${brewcaskappsinstall[@]}"
 for pkg in "${brewcaskappsinstall[@]}"; do
   brew cask install --appdir="/Applications" ${pkg}
 done
 
-echo "🤖 ugrading ${brewcaskappsupgrade[@]}"
+echo "⛳️ ugrading ${brewcaskappsupgrade[@]}"
 for pkg in "${brewcaskappsupgrade[@]}"; do
   brew cask upgrade --appdir="/Applications" ${pkg}
 done

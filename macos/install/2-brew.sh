@@ -63,12 +63,12 @@ for pkg in "${brewapps[@]}"; do
     fi
 done
 
-echo "🤖 installing ${brewappsinstall[@]}"
+echo "⛳️ installing ${brewappsinstall[@]}"
 for pkg in "${brewappsinstall[@]}"; do
   brew install ${pkg}
 done
 
-echo "🤖 upgrading ${brewappsupgrade[@]}"
+echo "⛳️ upgrading ${brewappsupgrade[@]}"
 for pkg in "${brewappsupgrade[@]}"; do
   brew upgrade ${pkg}
 done
@@ -76,14 +76,14 @@ done
 # Add brew-installed bash as one of the available shells
 # To set it as default, `chsh -s /usr/local/bin/bash`
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo "🤖 adding newly installed bash to the available shells. Passsword might be needed."
+  echo "⛳️ adding newly installed bash to the available shells. Passsword might be needed."
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
 fi;
 
 # Add brew-installed fish as one of the available shells
 # To set it as default, `chsh -s /usr/local/bin/fish`
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
-  echo "🤖 adding newly installed fish to the available shells. Passsword might be needed."
+  echo "⛳️ adding newly installed fish to the available shells. Passsword might be needed."
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
 fi;
 
