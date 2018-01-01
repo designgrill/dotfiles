@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rm -rf /tmp/osx-terminal.app-colors-solarized
-git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git /tmp/osx-terminal.app-colors-solarized
+git clone https://github.com/designgrill/osx-terminal.app-colors-solarized.git /tmp/osx-terminal.app-colors-solarized
 
 # You could also use "Solarized Light" instead of "Solarized Dark" below
 osascript <<EOD
