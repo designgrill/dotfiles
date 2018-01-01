@@ -26,6 +26,6 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 * Detailed configuration for tmux
 * Detailed configuration for fish
 
-## Interesting Strategies
+## Resources
 * [Using Stow](https://spin.atomicobject.com/2014/12/26/manage-dotfiles-gnu-stow/)
 * [Best Shell Setup](https://bitbucket.org/flowblok/shell-startup/src)
