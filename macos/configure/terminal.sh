@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-rm -rf /tmp/osx-terminal.app-colors-solarized
-git clone https://github.com/designgrill/osx-terminal.app-colors-solarized.git /tmp/osx-terminal.app-colors-solarized
+if [ -d /tmp/osx-terminal.app-colors-solarized ]; then
+  git -C /tmp/osx-terminal.app-colors-solarized pull
+else
+  git clone https://github.com/designgrill/osx-terminal.app-colors-solarized.git /tmp/osx-terminal.app-colors-solarized
+fi
 
 # You could also use "Solarized Light" instead of "Solarized Dark" below
 osascript <<EOD
@@ -49,7 +52,3 @@ tell application "Terminal"
 end tell
 
 EOD
-
-for app in "Terminal"; do
-	killall "${app}" &> /dev/null
-done
