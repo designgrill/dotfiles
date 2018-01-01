@@ -14,6 +14,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
   * `stow others -t ~/` will configure lot of other smaller dotfiles at your home directory.
   * `stow vim -t ~/` will configure vim. Run `vim/install.sh` before that.
   * `stow git -t ~/`
+  * `mkdir -p ~/.config/` and then `stow fish -t ~/`
 
 ## Exclusions
 * Atom settings are synced using the `sync-settings` plugin which depends on github's gists.
