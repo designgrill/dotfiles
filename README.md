@@ -15,6 +15,9 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
   * `stow vim -t ~/` will configure vim. Run `vim/install.sh` before that.
   * `stow git -t ~/`
 
+## Exclusions
+* Atom settings are synced using the `sync-settings` plugin which depends on github's gists.
+
 ## ToDo
 * Most of the Ubuntu options as they haven't been tested yet
 * Get a better bash prompt
