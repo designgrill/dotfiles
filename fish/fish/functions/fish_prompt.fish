@@ -18,6 +18,10 @@ function fish_prompt
 
     # Line 2
     echo
-    printf '🐠 '
+		# The fish below is followed by a zero-width space to cover around a bug in fish
+		# https://github.com/fish-shell/fish-shell/issues/4539
+		# printf '🐠 '
+		# Till then use a basic prompt
+    printf '↪ '
     set_color normal
 end
