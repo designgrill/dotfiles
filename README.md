@@ -29,6 +29,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 * Detailed configuration for vim
 * Detailed configuration for tmux
 * Detailed configuration for fish
+* Explore alternatives to Terminal on macOS (iTerm 2?)
 
 ## Resources
 * [Using Stow](https://spin.atomicobject.com/2014/12/26/manage-dotfiles-gnu-stow/)
