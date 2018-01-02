@@ -11,3 +11,9 @@
 "\eOA": history-search-backward
 "\e[B": history-search-forward
 "\eOB": history-search-forward
+
+# Show options in single tab instead of double
+set show-all-if-ambiguous on
+
+# Ignore case
+set completion-ignore-case on
