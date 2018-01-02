@@ -17,7 +17,8 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
   * `mkdir -p ~/.config/` and then `stow fish -t ~/ -v --ignore=.DS_Store`
 
 ## Exclusions
-* Atom settings are synced using the `sync-settings` plugin which depends on github's gists.
+* Atom settings are synced using the `sync-settings` package which depends on github's gists.
+* `sync-settings` package for Atom may not sync language specific settings like gfm soft wrap.
 
 ## ToDo
 * Most of the Ubuntu options as they haven't been tested yet
