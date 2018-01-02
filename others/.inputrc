@@ -1,0 +1,13 @@
+# Better autocomplete search for bash
+# Say in past you used following commands:
+# git status
+# git stash
+# then, pressing up or down arrow when prompt reads git will give you only these two as option and nothing else.
+# Basically, context aware search in bash
+# It's a little bit like ctrl-r (mentioned in many of the comments below), but anchored to the start of the line, and the arrow keys allow you to scroll back and forth between matches.
+# Run `bind -p | grep history` to see all the shortcuts related to history in bash
+
+"\e[A": history-search-backward
+"\eOA": history-search-backward
+"\e[B": history-search-forward
+"\eOB": history-search-forward
