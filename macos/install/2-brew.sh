@@ -31,6 +31,7 @@ brewapps=(
   "lua"
   "mas"
   "moreutils" # Install some other useful utilities like `sponge`.
+  "mycli"
   "mysql"
   "node"
   "openssh" # Install more recent versions of some macOS tools.
