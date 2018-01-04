@@ -36,6 +36,14 @@ sudo pmset -a standbydelay 86400
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Enable Airplay menu bar item
+defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.airplay' -bool true
+defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Displays.menu'
+
+# Enable Bluetooth menu bar item
+defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.bluetooth' -bool true
+defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'
+
 # Set highlight color to green
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
