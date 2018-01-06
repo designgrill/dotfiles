@@ -14,7 +14,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
   * `stow others -t ~/ -v --ignore=.DS_Store` will configure lot of other smaller dotfiles at your home directory.
   * `stow vim -t ~/ -v --ignore=.DS_Store` will configure vim. Run `vim/install.sh` before that.
   * `stow git -t ~/ -v --ignore=.DS_Store`
-  * `mkdir -p ~/.config/` and then `stow fish -t ~/ -v --ignore=.DS_Store`
+  * `mkdir -p ~/.config/` and then `stow fish -t ~/.config/ -v --ignore=.DS_Store`
 
 ## Exclusions
 * Atom settings are synced using the `sync-settings` package which depends on github's gists.
