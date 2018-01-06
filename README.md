@@ -1,4 +1,4 @@
-# Anshul's Dotfiles
+# Dotfiles
 WIP
 
 ## New Machine Setup
