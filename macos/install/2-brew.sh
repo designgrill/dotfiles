@@ -88,7 +88,4 @@ if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
 fi;
 
-# Set the new bash as the default shell (or change it to be fish)
-chsh -s /usr/local/bin/bash
-
 brew cleanup
