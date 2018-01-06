@@ -26,6 +26,7 @@ brewapps=(
   "gnupg"
   "go"
   "grep --with-default-names" # Install more recent versions of some macOS tools.
+  "gs"
   "httpie"
   "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
   "lua"
