@@ -1,4 +1,5 @@
 # Anshul's Dotfiles
+WIP
 
 ## New Machine Setup
 READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
@@ -22,7 +23,6 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 
 ## ToDo
 * Most of the Ubuntu options as they haven't been tested yet
-* Get a better bash prompt
 * For brew install, check for packages with flags or with alternate names isn't done properly
 * Have richer config for `others`
 * Have a better bash_history config as in what should go in, duplicates, sharing in tabs etc.
