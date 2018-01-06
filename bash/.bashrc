@@ -30,9 +30,20 @@ fi
 
 export PATH=$PATH:$GOPATH/bin
 
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
 # Make the Bash History size unlimited
 export HISTSIZE=
 export HISTFILESIZE=
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
 # Get Bash Completion which gives auto completion for 100s of commands including git
 
