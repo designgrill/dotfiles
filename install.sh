@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Doesn't take care of OS specific installations.
@@ -7,10 +9,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # UPDATE THIS COMMENT WHEN THIS IS NOT THE CASE ANYMORE.
 
 # Vim Settings
-mkdir -p $DIR/vim/.vim/autoload
-curl -LSso $DIR/vim/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-if [ -d $DIR/vim/.vim/bundle/vim-colors-solarized ]; then
-  git -C $DIR/vim/.vim/bundle/vim-colors-solarized pull
+mkdir -p "$DIR/vim/.vim/autoload"
+curl -LSso "$DIR/vim/.vim/autoload/pathogen.vim" https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+if [ -d "$DIR/vim/.vim/bundle/vim-colors-solarized" ]; then
+  git -C "$DIR/vim/.vim/bundle/vim-colors-solarized" pull
 else
-  git clone git://github.com/altercation/vim-colors-solarized.git $DIR/vim/.vim/bundle/vim-colors-solarized
+  git clone git://github.com/altercation/vim-colors-solarized.git "$DIR/vim/.vim/bundle/vim-colors-solarized"
 fi

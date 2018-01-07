@@ -44,25 +44,38 @@ brewcaskapps=(
   xquartz
 )
 
+brewcaskapps+=(
+  inkscape # dependent on xquartz
+)
+
 brewcaskappsinstall=()
 brewcaskappsupgrade=()
 
 for pkg in "${brewcaskapps[@]}"; do
-    if brew cask list -1 | grep -q "^${pkg}\$"; then
-        brewcaskappsupgrade+=("$pkg")
-    else
-        brewcaskappsinstall+=("$pkg")
-    fi
+  if (brew cask outdated --quiet | grep -q "^${pkg%% *}\$"); then
+    brewcaskappsupgrade+=("$pkg")
+  elif ! (brew cask list -1 | grep -q "^${pkg%% *}\$"); then
+    brewcaskappsinstall+=("$pkg")
+  fi
 done
 
-echo "⛳️ installing ${brewcaskappsinstall[@]}"
-for pkg in "${brewcaskappsinstall[@]}"; do
-  brew cask install --appdir="/Applications" ${pkg}
-done
+if [ ${#brewcaskappsinstall[@]} -eq 0 ]; then
+    echo "⛳️ Nothing new to install"
+else
+  echo "⛳️ installing ${brewcaskappsinstall[*]}"
+  for pkg in "${brewcaskappsinstall[@]}"; do
+    brew cask install --appdir="/Applications" "${pkg}"
+  done
+fi
 
-echo "⛳️ ugrading ${brewcaskappsupgrade[@]}"
-for pkg in "${brewcaskappsupgrade[@]}"; do
-  brew cask upgrade --appdir="/Applications" ${pkg}
-done
+
+if [ ${#brewcaskappsupgrade[@]} -eq 0 ]; then
+    echo "⛳️ Nothing to upgrade"
+else
+  echo "⛳️ ugrading ${brewcaskappsupgrade[*]}"
+  for pkg in "${brewcaskappsupgrade[@]}"; do
+    brew cask upgrade --appdir="/Applications" "${pkg}"
+  done
+fi
 
 brew cleanup
