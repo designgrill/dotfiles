@@ -16,6 +16,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
   * `stow vim -t ~/ -v --ignore=.DS_Store` will configure vim. Run `vim/install.sh` before that.
   * `stow git -t ~/ -v --ignore=.DS_Store`
   * `mkdir -p ~/.config/` and then `stow fish -t ~/.config/ -v --ignore=.DS_Store`
+0. Delete `"~/Library/Application Support/OpenEmu/Bindings/Default.oebindings"` if the USB game controllers are not working in OpenEmu
 
 ## Exclusions
 * Atom settings are synced using the `sync-settings` package which depends on github's gists.
