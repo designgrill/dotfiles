@@ -8,4 +8,4 @@ alias ls="ls --color=auto"
 alias reload='source ~/.bashrc'
 alias serve='python -m SimpleHTTPServer'
 alias socks='ssh -fND 8888'
-alias sourcetree="open -a SourceTree"
+alias gitg="open -a SourceTree"
