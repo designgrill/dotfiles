@@ -2,7 +2,7 @@
 OS=$(uname -s)
 
 # Use atom as default editor
-export EDITOR='atom'
+export EDITOR='atom --wait'
 
 #Path setup
 if [[ $OS == 'Darwin' ]]; then
