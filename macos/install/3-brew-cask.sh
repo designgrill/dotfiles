@@ -78,4 +78,7 @@ else
   done
 fi
 
+echo "⛳️ installing Python Language Server for code editor like Atom"
+pip3 install python-language-server
+
 brew cleanup
