@@ -18,4 +18,5 @@ fi
 # Xcode
 mas install 497799835 # Xcode 497799835
 echo "⛳️ Checking if you need to accept Xcode license. Password will be asked to accept."
-sudo xcodebuild -license accept
+# sudo xcodebuild -license accept
+sudo xcodebuild -runFirstLaunch
