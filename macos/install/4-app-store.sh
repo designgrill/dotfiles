@@ -13,4 +13,5 @@ mas install 1106867065 # Svgsus 1106867065
 mas install 485812721 # TweetDeck 485812721
 mas install 409789998 # Twitter 409789998
 mas install 1147396723 # WhatsApp 1147396723
+mas install 931134707 # Wire 931134707
 mas install 410628904 # Wunderlist 410628904
