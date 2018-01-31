@@ -24,6 +24,7 @@ brewcaskapps=(
   itsycal
   java
   java8
+  jetbrains-toolbox
   marp
   metabase-app
   mysqlworkbench
