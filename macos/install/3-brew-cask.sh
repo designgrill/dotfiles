@@ -19,6 +19,7 @@ brewcaskapps=(
   firefox
   flux
   google-chrome
+  google-cloud-sdk
   imagealpha
   imageoptim
   itsycal
@@ -81,5 +82,15 @@ fi
 
 echo "⛳️ installing Python Language Server for code editor like Atom"
 pip3 install python-language-server
+
+echo "⛳️ installing Google App Engine Python support"
+if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+fi;
+if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+fi;
+gcloud components install app-engine-python
+gcloud components install app-engine-python-extras
 
 brew cleanup
