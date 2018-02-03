@@ -2,8 +2,8 @@
 * **Change the ComputerName etc.** in ./configure.sh before proceeding
 
 ## Software to Install Manually
-Adobe Photoshop Elements
-Popcorn Time
+* [Adobe Photoshop Elements 10](https://helpx.adobe.com/photoshop-elements/kb/download-earlier-version-photoshop-elements.html), you might have to run the installer as with sudo to succeed, else it might keep giving weird error.
+* Popcorn Time
 
 ## IMPORTANT
 * Accessibility access cannot be enabled automatically on this version of macOS which is needed for Spectacle. You will have to do it on first launch.
