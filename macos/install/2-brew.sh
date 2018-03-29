@@ -43,6 +43,7 @@ brewapps=(
   "shellcheck"
   "ssh-copy-id"
   "stow"
+  "terraform"
   "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
