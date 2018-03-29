@@ -2,6 +2,10 @@ unlockpdf() {
   qpdf --decrypt --password=$2 $1 Unlocked-$1
 }
 
+rotatepdf() {
+  qpdf "$1" --rotate=$2:1-z "Rotated-$1"
+}
+
 showcerts() {
   echo | openssl s_client -showcerts -servername $1 -connect $1:${2:-"443"} 2>/dev/null
 }
