@@ -21,6 +21,7 @@ brewapps=(
   "git-extras"
   "git-lfs"
   "git"
+  "glances"
   "gnu-sed --with-default-names" # Install GNU `sed`, overwriting the built-in `sed`.
   "gnupg"
   "go"
