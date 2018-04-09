@@ -44,6 +44,7 @@ brewcaskapps=(
   virtualbox
   visual-studio-code
   vlc
+  wireshark
   xquartz
 )
 
