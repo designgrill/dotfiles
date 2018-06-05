@@ -10,6 +10,7 @@ fi
 brew update
 
 brewapps=(
+  "aws-shell"
   "bash-completion@2"
   "bash" # Install Bash 4, don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
   "brew-cask-completion"
