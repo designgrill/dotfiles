@@ -22,6 +22,7 @@ brewcaskapps=(
   google-cloud-sdk
   imagealpha
   imageoptim
+  istat-menus
   itsycal
   java
   java8
