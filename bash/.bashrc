@@ -45,6 +45,9 @@ export HISTFILESIZE=
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# confirm before executing commands from history
+shopt -s histverify
+
 # Get Bash Completion which gives auto completion for 100s of commands including git
 
 if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
