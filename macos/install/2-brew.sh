@@ -46,6 +46,7 @@ brewapps=(
   "ssh-copy-id"
   "stow"
   "terraform"
+  "tcptraceroute"
   "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
