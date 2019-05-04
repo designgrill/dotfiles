@@ -18,8 +18,10 @@ brewcaskapps=(
   dropbox
   firefox
   flux
+  google-chat
   google-chrome
   google-cloud-sdk
+  google-drive-file-stream
   imagealpha
   imageoptim
   istat-menus

@@ -29,6 +29,7 @@ brewapps=(
   "grep --with-default-names" # Install more recent versions of some macOS tools.
   "httpie"
   "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
+  "jq" # for json manipulation in commandline
   "lua"
   "mas"
   "moreutils" # Install some other useful utilities like `sponge`.

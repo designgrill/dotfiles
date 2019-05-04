@@ -3,11 +3,12 @@
 # Get the following apps from App Store
 # Please note that this command will not allow you to install (or even purchase) an app for the first time.
 # They must already be in the Purchased tab of the App Store.
+
+# Use `mas list` to show the currently installed apps
 mas install 417602904 # CloudApp 417602904
 mas install 406056744 # Evernote 406056744
 mas install 405399194 # Kindle 405399194
 mas install 880663569 # Pixlr 880663569
-mas install 425955336 # Skitch 425955336
 mas install 803453959 # Slack 803453959
 mas install 1106867065 # Svgsus 1106867065
 mas install 485812721 # TweetDeck 485812721
