@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# This has to be run in the project root only
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Doesn't take care of OS specific installations.

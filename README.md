@@ -14,7 +14,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 ```
 stow bash -t ~/ -v --ignore=.DS_Store      # will configure bash for you etc. It might error out if the file it is trying to symlink already exists, cleanup is up to you.
 stow others -t ~/ -v --ignore=.DS_Store    # will configure lot of other smaller dotfiles at your home directory.
-stow vim -t ~/ -v --ignore=.DS_Store       # will configure vim. Run `vim/install.sh` before that.
+stow vim -t ~/ -v --ignore=.DS_Store       # will configure vim. Run `./vim.install.sh` before that.
 stow git -t ~/ -v --ignore=.DS_Store
 mkdir -p ~/.config/
 stow fish -t ~/.config/ -v --ignore=.DS_Store
