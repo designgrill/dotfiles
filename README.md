@@ -9,7 +9,11 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 0. Go to `macos/install` or similar and run the scripts as needed. You will need to run this only once per machine.
 0. Go to `macos/configure` or similar and run the scripts as needed. `macos.sh` might be the first one if you are running for macOS. Per user.
 0. Setup the .ssh so that you can clone this repo and use that for symlinking.
-0. Clone this repo and also setup the appropriate git config (user.name etc. specifically for this repo)
+0. Clone this repo
+0. Setup the appropriate git config (user.name etc. specifically for this repo)
+```
+git config --local -e
+```
 0. In the repo root, use gnu stow to make config available to your home directory. Per user.
 ```
 stow bash -t ~/ -v --ignore=.DS_Store      # will configure bash for you etc. It might error out if the file it is trying to symlink already exists, cleanup is up to you.
