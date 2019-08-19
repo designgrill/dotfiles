@@ -24,6 +24,11 @@ mkdir -p ~/.config/
 stow fish -t ~/.config/ -v --ignore=.DS_Store
 ```
 0. `~/.config/fish/fish_variables` might be overwritten by fish time and again, you might have to keep syncing.
+0. Install all atom plugins
+```
+apm login
+apm stars --install
+```
 0. Delete `"~/Library/Application Support/OpenEmu/Bindings/Default.oebindings"` if the USB game controllers are not working in OpenEmu
 
 ## Exclusions
