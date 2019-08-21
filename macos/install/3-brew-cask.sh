@@ -6,6 +6,7 @@ brew tap caskroom/versions
 
 brewcaskapps=(
   adium
+  adobe-acrobat-reader
   android-platform-tools
   android-sdk
   android-studio
