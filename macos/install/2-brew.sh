@@ -10,6 +10,7 @@ fi
 brew update
 
 brewapps=(
+  "aws-google-auth"
   "aws-shell"
   "bash-completion@2"
   "bash" # Install Bash 4, don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
@@ -46,6 +47,7 @@ brewapps=(
   "shellcheck"
   "ssh-copy-id"
   "stow"
+  "telnet"
   "terraform"
   "tcptraceroute"
   "the_silver_searcher" # ag — Silver Searcher
