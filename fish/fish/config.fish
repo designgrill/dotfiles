@@ -3,5 +3,7 @@ set -U fish_prompt_pwd_dir_length 0
 set -Ux EDITOR "atom --wait"
 
 if test -d ~/.local/fish
-    source ~/.local/fish/*.fish
+  for f in ~/.local/fish/*.fish
+    source $f
+  end
 end
