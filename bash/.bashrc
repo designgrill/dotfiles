@@ -66,8 +66,15 @@ fi;
 
 
 # Source other interesting files
-source ~/.bash/prompt.sh
-source ~/.bash/aliases.sh
-source ~/.bash/functions.sh
+if [ -d ~/.bash ]; then
+  source ~/.bash/*.sh
+fi;
+
+
+# Source local additions if any
+if [ -d ~/.local/bash ]; then
+  source ~/.local/bash/*.sh
+fi;
+
 # Get good colors for common commands
 eval "$(dircolors ~/.dircolors)" # https://github.com/seebi/dircolors-solarized/blob/master/dircolors.256dark
