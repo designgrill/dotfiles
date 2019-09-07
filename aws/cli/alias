@@ -11,7 +11,7 @@ list-instances = ec2 describe-instances \
 
 list-ips = !f() {
     aws ec2 describe-instances \
-    --filter Name=instance-state-name,Values=running Name=tag:Name,Values="$1" \
+    --filter Name=instance-state-name,Values=running Name=tag:Name,Values="*$1*" \
     --query 'Reservations[].Instances[].[PrivateIpAddress]' \
     --output text; }; f
 
