@@ -20,8 +20,13 @@ stow bash -t ~/ -v --ignore=.DS_Store      # will configure bash for you etc. It
 stow others -t ~/ -v --ignore=.DS_Store    # will configure lot of other smaller dotfiles at your home directory.
 stow vim -t ~/ -v --ignore=.DS_Store       # will configure vim. Run `./vim.install.sh` before that.
 stow git -t ~/ -v --ignore=.DS_Store
+
 mkdir -p ~/.config/
 stow fish -t ~/.config/ -v --ignore=.DS_Store
+
+mkdir -p ~/.aws/cli/
+cd aws/
+stow cli -t ~/.aws/cli/ -v --ignore=.DS_Store
 ```
 0. `~/.config/fish/fish_variables` might be overwritten by fish time and again, you might have to keep syncing.
 0. Install all atom plugins
