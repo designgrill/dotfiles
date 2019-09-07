@@ -66,14 +66,18 @@ fi;
 
 
 # Source other interesting files
-if [ -d ~/.bash ]; then
-  source ~/.bash/*.sh
+if [ -d ~/.bash/ ]; then
+  for f in ~/.bash/*.sh;
+    do source $f;
+  done
 fi;
 
 
 # Source local additions if any
 if [ -d ~/.local/bash ]; then
-  source ~/.local/bash/*.sh
+  for f in ~/.local/bash/*.sh;
+    do source $f;
+  done
 fi;
 
 # Get good colors for common commands
