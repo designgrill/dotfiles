@@ -7,7 +7,7 @@ whoami = sts get-caller-identity
 list-instances = ec2 describe-instances \
     --filter Name=instance-state-name,Values=running \
     --output table \
-    --query 'sort_by(Reservations[].Instances[].{ID: InstanceId,IP: PrivateIpAddress,Name: Tags[?Key==`Name`].Value | [0] || `None`,Type: InstanceType, Platform: Platform || `Linux`}[], &Name)'
+    --query 'sort_by(Reservations[].Instances[].{ID: InstanceId,IP: PrivateIpAddress,Name: Tags[?Key==`Name`].Value | [0] || `None`,Type: InstanceType, Platform: Platform || `linux`, Lifecycle: InstanceLifecycle || ``}[], &Name)'
 
 list-ips = !f() {
     aws ec2 describe-instances \
