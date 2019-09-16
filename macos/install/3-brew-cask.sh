@@ -11,6 +11,7 @@ brewcaskapps=(
   android-sdk
   android-studio
   atom
+  charles
   cheatsheet
   cyberduck
   diffmerge
