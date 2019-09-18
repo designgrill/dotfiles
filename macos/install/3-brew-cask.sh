@@ -31,7 +31,6 @@ brewcaskapps=(
   java
   java8
   jetbrains-toolbox
-  kobo
   marp
   metabase-app
   mysqlworkbench
