@@ -9,6 +9,7 @@ mas install 417602904 # CloudApp 417602904
 mas install 406056744 # Evernote 406056744
 mas install 405399194 # Kindle 405399194
 mas install 1295203466 # Microsoft Remote Desktop
+mas install 823766827 # OneDrive
 mas install 880663569 # Pixlr 880663569
 mas install 803453959 # Slack 803453959
 mas install 1106867065 # Svgsus 1106867065
