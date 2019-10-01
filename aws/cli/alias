@@ -51,3 +51,8 @@ docker-ecr-login =
     passwd=$(aws ecr get-authorization-token --region $region --output text --query authorizationData[].authorizationToken | base64 --decode | cut -d: -f2)
     docker login -u AWS -p $passwd $endpoint
   }; f
+
+user-data =
+  !f() {
+    aws ec2 describe-instance-attribute --instance-id "${1}" --attribute userData --output text --query "UserData.Value" | base64 --decode | zcat
+  }; f
