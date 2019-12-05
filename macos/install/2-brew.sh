@@ -10,24 +10,27 @@ fi
 brew update
 
 brewapps=(
+  # update the shell files to ensure the gnu version of some packages are available
+  # check out https://github.com/fabiomaia/linuxify/blob/master/.linuxify
   "aws-google-auth"
   "aws-shell"
+  "awscli"
   "bash-completion@2"
   "bash" # Install Bash 4, don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
   "brew-cask-completion"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
-  "findutils --with-default-names" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+  "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   "fish"
   "ghostscript" # gs
   "git-extras"
   "git-lfs"
   "git"
   "glances"
-  "gnu-sed --with-default-names" # Install GNU `sed`, overwriting the built-in `sed`.
+  "gnu-sed" # Install GNU `sed`, overwriting the built-in `sed`.
   "gnupg"
   "go"
-  "grep --with-default-names" # Install more recent versions of some macOS tools.
+  "grep" # Install more recent versions of some macOS tools.
   "httpie"
   "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
   "jq" # for json manipulation in commandline
@@ -54,8 +57,8 @@ brewapps=(
   "tldr"
   "tree"
   "unrar"
-  "vim --with-override-system-vi" # Install more recent versions of some macOS tools.
-  "wget --with-iri"
+  "vim" # Install more recent versions of some macOS tools.
+  "wget"
   "yarn"
   "youtube-dl"
   "zopfli"
