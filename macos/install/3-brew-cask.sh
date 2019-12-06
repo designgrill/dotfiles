@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Get the remaining ones from Homebrew Cask
-brew tap caskroom/cask
-brew tap caskroom/versions
+brew tap homebrew/cask-cask
+brew tap homebrew/cask-versions
 
 brewcaskapps=(
   adium
