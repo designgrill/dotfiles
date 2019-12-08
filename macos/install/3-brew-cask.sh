@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 # Get the remaining ones from Homebrew Cask
-brew tap homebrew/cask-cask
 brew tap homebrew/cask-versions
 
 brewcaskapps=(
-  adium
   adobe-acrobat-reader
   android-platform-tools
   android-sdk
@@ -15,7 +13,6 @@ brewcaskapps=(
   cheatsheet
   cyberduck
   diffmerge
-  dnscrypt
   docker
   dropbox
   firefox
@@ -26,13 +23,10 @@ brewcaskapps=(
   google-drive-file-stream
   imagealpha
   imageoptim
-  istat-menus
   itsycal
   java
-  java8
   jetbrains-toolbox
-  marp
-  metabase-app
+  metabase
   mysqlworkbench
   openemu
   osxfuse

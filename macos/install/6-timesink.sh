@@ -2,17 +2,17 @@
 
 # ffmpeg
 if brew list -1 | grep -q "ffmpeg"; then
-    brew upgrade "ffmpeg --with-openssl --with-libvpx"
+    brew upgrade "ffmpeg"
 else
-    brew install "ffmpeg --with-openssl --with-libvpx"
+    brew install "ffmpeg"
 fi
 
 
 # imagemagick
 if brew list -1 | grep -q "imagemagick"; then
-    brew upgrade "imagemagick --with-webp"
+    brew upgrade "imagemagick"
 else
-    brew install "imagemagick --with-webp"
+    brew install "imagemagick"
 fi
 
 # Xcode
