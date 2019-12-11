@@ -2,8 +2,6 @@
 set -U fish_prompt_pwd_dir_length 0
 set -Ux EDITOR "atom --wait"
 
-# Set the nvm working directory
-set -Ux  NVM_DIR "$HOME/.nvm"
 
 if test -d ~/.local/fish
   for f in ~/.local/fish/*.fish
@@ -17,3 +15,11 @@ if not functions -q fisher
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
+
+# Set up the nvm
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+set -Ux  NVM_DIR "$HOME/.nvm"
+# Uncomment the following line if you are using node frequently
+# nvm use default --silent
