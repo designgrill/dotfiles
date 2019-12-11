@@ -1,2 +1,6 @@
 # fisher
 fisher.fish
+
+# bass installed through fisher
+__bass.py
+bass.fish
