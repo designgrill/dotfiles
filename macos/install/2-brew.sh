@@ -40,6 +40,7 @@ brewapps=(
   "mycli"
   "mysql"
   "node"
+  "nvm"
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
   "proselint"
@@ -110,3 +111,6 @@ if ! grep -Fq '/usr/local/bin/fish' /etc/shells; then
 fi;
 
 brew cleanup
+
+# Set the directory to keep binaries for nvm
+mkdir -p ~/.nvm
