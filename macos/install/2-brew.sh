@@ -12,6 +12,7 @@ brew update
 brewapps=(
   # update the shell files to ensure the gnu version of some packages are available
   # check out https://github.com/fabiomaia/linuxify/blob/master/.linuxify
+  "automake"
   "aws-google-auth"
   "aws-shell"
   "awscli"
@@ -46,6 +47,7 @@ brewapps=(
   "proselint"
   "qcachegrind"
   "qpdf"
+  "rbenv"
   "redis"
   "screen" # Install more recent versions of some macOS tools.
   "shellcheck"
