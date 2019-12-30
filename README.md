@@ -34,7 +34,7 @@ stow cli -t ~/.aws/cli/ -v --ignore=.DS_Store
 apm login
 apm stars --install
 ```
-0. For OpenEmu, you need to select the USB gamepad in the controls section and map the buttons one by one. Delete `"~/Library/Application Support/OpenEmu/Bindings/Default.oebindings"` if the USB game controllers are not working in OpenEmu
+0. For OpenEmu, you need to select the USB gamepad in the controls section and map the buttons one by one. Delete `"~/Library/Application Support/OpenEmu/Bindings/Default.oebindings"` if the USB game controllers are not working in OpenEmu. Also, you have to configure each and every button for it to work properly, and not just select the correct game pad.
 
 ## Exclusions
 * Atom settings are synced using the `sync-settings` package which depends on github's gists.
