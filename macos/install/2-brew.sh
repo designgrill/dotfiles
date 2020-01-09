@@ -19,6 +19,7 @@ brewapps=(
   "bash-completion@2"
   "bash" # Install Bash 4, don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
   "brew-cask-completion"
+  "broot"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
   "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.

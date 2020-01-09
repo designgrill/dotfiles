@@ -89,3 +89,8 @@ fi;
 
 # Get good colors for common commands
 eval "$(dircolors ~/.dircolors)" # https://github.com/seebi/dircolors-solarized/blob/master/dircolors.256dark
+
+# Source the broot helper function
+if [ -d ~/Library/Preferences/org.dystroy.broot/launcher/bash/br ]; then
+  source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br;
+fi;
