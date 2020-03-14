@@ -38,7 +38,6 @@ brewcaskapps=(
   teamviewer
   transmission
   tunnelblick
-  videostream
   virtualbox
   visual-studio-code
   vlc
