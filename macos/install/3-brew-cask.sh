@@ -17,6 +17,7 @@ brewcaskapps=(
   dropbox
   firefox
   flux
+  google-backup-and-sync
   google-chat
   google-chrome
   google-cloud-sdk
