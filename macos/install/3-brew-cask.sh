@@ -15,6 +15,7 @@ brewcaskapps=(
   diffmerge
   docker
   dropbox
+  fanny
   firefox
   flux
   google-backup-and-sync
