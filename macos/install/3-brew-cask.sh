@@ -45,6 +45,7 @@ brewcaskapps=(
   vlc
   wireshark
   xquartz
+  zoomus
 )
 
 brewcaskapps+=(
