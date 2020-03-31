@@ -32,6 +32,8 @@ brewcaskapps=(
   mysqlworkbench
   openemu
   osxfuse
+  plex
+  plex-media-server
   postico
   postman
   skype
@@ -46,6 +48,7 @@ brewcaskapps=(
   wireshark
   xquartz
   zoomus
+  zotero
 )
 
 brewcaskapps+=(
