@@ -12,9 +12,6 @@ if [[ $OS == 'Darwin' ]]; then
   # GOROOT-based install location to your PATH:
   export PATH="$PATH:$(brew --prefix)/opt/go/libexec/bin"
 
-  # Android
-  export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
-
   # Core Utils
   export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
