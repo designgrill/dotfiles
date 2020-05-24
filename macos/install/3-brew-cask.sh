@@ -5,8 +5,6 @@ brew tap homebrew/cask-versions
 
 brewcaskapps=(
   adobe-acrobat-reader
-  android-platform-tools
-  android-sdk
   android-studio
   atom
   charles
@@ -19,7 +17,6 @@ brewcaskapps=(
   firefox
   flux
   google-backup-and-sync
-  google-chat
   google-chrome
   google-cloud-sdk
   google-drive-file-stream
@@ -41,7 +38,6 @@ brewcaskapps=(
   spectacle
   teamviewer
   transmission
-  tunnelblick
   virtualbox
   visual-studio-code
   vlc
