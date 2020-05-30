@@ -82,7 +82,7 @@ else
 fi
 
 echo "⛳️ installing Python Language Server for code editor like Atom"
-pip3 install python-language-server
+pip3 install python-language-server --user
 
 echo "⛳️ installing Google App Engine Python support"
 if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then
