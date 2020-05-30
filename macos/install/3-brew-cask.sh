@@ -55,7 +55,7 @@ brewcaskappsinstall=()
 brewcaskappsupgrade=()
 
 for pkg in "${brewcaskapps[@]}"; do
-  if (brew cask outdated --quiet | grep -q "^${pkg%% *}\$"); then
+  if (brew cask outdated --greedy --quiet | grep -q "^${pkg%% *}\$"); then
     brewcaskappsupgrade+=("$pkg")
   elif ! (brew cask list -1 | grep -q "^${pkg%% *}\$"); then
     brewcaskappsinstall+=("$pkg")
