@@ -5,6 +5,7 @@
 # They must already be in the Purchased tab of the App Store.
 
 # Use `mas list` to show the currently installed apps
+mas install 1056643111 # Clocker 1056643111
 mas install 417602904 # CloudApp 417602904
 mas install 406056744 # Evernote 406056744
 mas install 405399194 # Kindle 405399194
