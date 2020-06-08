@@ -7,6 +7,7 @@ brewcaskapps=(
   adobe-acrobat-reader
   android-studio
   atom
+  bitbar
   charles
   cheatsheet
   cyberduck

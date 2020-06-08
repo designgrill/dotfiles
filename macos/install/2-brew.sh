@@ -22,6 +22,7 @@ brewapps=(
   "broot"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
+  "dnscrypt-proxy"
   "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   "fish"
   "ghostscript" # gs
@@ -114,6 +115,10 @@ if ! grep -Fq '/usr/local/bin/fish' /etc/shells; then
 fi;
 
 brew cleanup
+
+# Add google and cloudflare as the default DNS providers
+grep -q '^server_names' /usr/local/etc/dnscrypt-proxy.toml && sed -i '' 's/^server_names.*/server_names = ["google", "cloudflare"]/' /usr/local/etc/dnscrypt-proxy.toml || sed -i '' '/^# server_names.*/a\'$'\n''server_names = ["google", "cloudflare"]' /usr/local/etc/dnscrypt-proxy.toml
+sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm
 mkdir -p ~/.nvm

@@ -8,6 +8,7 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 0. Download the zip of this repo so that you can run few scripts.
 0. Go to `macos/install` or similar and run the scripts as needed. You will need to run this only once per machine.
 0. Run spectacle so that its settings can be applied in the next step.
+0. Add [dnscrypt-proxy plugin](https://getbitbar.com/plugins/Network/dnscrypt-proxy-switcher.10s.sh) to bitbar in Menu Bar.
 0. Go to `macos/configure` or similar and run the scripts as needed. `macos.sh` might be the first one if you are running for macOS. Per user.
 0. Setup the .ssh and other private home folders so that you can clone this repo and use that for symlinking.
 0. Clone this repo
