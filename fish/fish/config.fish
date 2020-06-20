@@ -27,6 +27,9 @@ set -Ux  NVM_DIR "$HOME/.nvm"
 # Set up rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+# Set up rust
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
 # Source the broot helper function
 if test -d ~/Library/Preferences/org.dystroy.broot/launcher/fish/br
   source ~/Library/Preferences/org.dystroy.broot/launcher/fish/br

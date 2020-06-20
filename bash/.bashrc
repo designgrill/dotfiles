@@ -69,6 +69,9 @@ export NVM_DIR="$HOME/.nvm"
 # rbenv
 eval "$(rbenv init -)"
 
+# rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Source other interesting files
 if [ -d ~/.bash/ ]; then
   for f in ~/.bash/*.sh;

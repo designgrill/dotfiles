@@ -51,6 +51,7 @@ brewapps=(
   "qpdf"
   "rbenv"
   "redis"
+  "rustup-init"
   "screen" # Install more recent versions of some macOS tools.
   "shellcheck"
   "ssh-copy-id"
@@ -122,3 +123,8 @@ sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm
 mkdir -p ~/.nvm
+
+# Set up rust
+rustup-init -y
+rustup completions bash > "$(brew --prefix)/etc/bash_completion.d/rustup.bash-completion"
+# fish comes with basic ruustup completion by default
