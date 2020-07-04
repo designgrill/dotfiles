@@ -6,6 +6,7 @@ brew tap homebrew/cask-versions
 brewcaskapps=(
   adobe-acrobat-reader
   android-studio
+  anydesk
   atom
   bitbar
   charles
@@ -42,6 +43,7 @@ brewcaskapps=(
   virtualbox
   visual-studio-code
   vlc
+  vnc-viewer
   wireshark
   xquartz
   zoomus
