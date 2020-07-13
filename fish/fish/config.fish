@@ -24,6 +24,10 @@ set -Ux  NVM_DIR "$HOME/.nvm"
 # Uncomment the following line if you are using node frequently
 # nvm use default --silent
 
+# Set up pyenv
+status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
 # Set up rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
