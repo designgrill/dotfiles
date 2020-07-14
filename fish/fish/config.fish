@@ -26,7 +26,7 @@ set -Ux  NVM_DIR "$HOME/.nvm"
 
 # Set up pyenv
 status --is-interactive; and source (pyenv init -|psub)
-status --is-interactive; and source (pyenv virtualenv-init -|psub)
+# status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 # Set up rbenv
 status --is-interactive; and source (rbenv init -|psub)
