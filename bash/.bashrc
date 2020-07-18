@@ -16,6 +16,16 @@ if [[ $OS == 'Darwin' ]]; then
   export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 
+  # Android
+  if [ -d ~/Library/Android ]; then
+    export ANDROID=~/Library/Android;
+    export ANDROID_HOME=$ANDROID/sdk;
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/emulator
+  fi;
+
 elif [[ $OS == 'Linux' ]]; then
   # Golang
   mkdir -p ~/documents/go

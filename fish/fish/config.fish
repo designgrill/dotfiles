@@ -16,6 +16,15 @@ if not functions -q fisher
     fish -c fisher
 end
 
+# Set up Android Commandling
+if test -d ~/Library/Android
+  set --export ANDROID ~/Library/Android;
+  set --export ANDROID_HOME $ANDROID/sdk;
+  set -gx PATH $ANDROID_HOME/tools $PATH;
+  set -gx PATH $ANDROID_HOME/tools/bin $PATH;
+  set -gx PATH $ANDROID_HOME/platform-tools $PATH;
+  set -gx PATH $ANDROID_HOME/emulator $PATH
+end
 # Set up the nvm
 function nvm
    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
