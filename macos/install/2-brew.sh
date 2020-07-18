@@ -129,3 +129,6 @@ mkdir -p ~/.nvm
 rustup-init -y
 rustup completions bash > "$(brew --prefix)/etc/bash_completion.d/rustup.bash-completion"
 # fish comes with basic ruustup completion by default
+
+# Add git aliases
+curl -LSso ~/.gitalias https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt

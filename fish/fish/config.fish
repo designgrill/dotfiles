@@ -47,3 +47,6 @@ set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 if test -d ~/Library/Preferences/org.dystroy.broot/launcher/fish/br
   source ~/Library/Preferences/org.dystroy.broot/launcher/fish/br
 end
+
+# aliases
+alias g='git'

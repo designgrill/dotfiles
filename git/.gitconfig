@@ -1,5 +1,6 @@
 [include]
   path = ~/.gitconfig.global
+  path = ~/.gitalias
 [core]
   excludesfile = ~/.gitignore.global
   ignorecase = true
