@@ -40,7 +40,9 @@ brewcaskapps=(
   spectacle
   teamviewer
   transmission
+  vagrant
   virtualbox
+  virtualbox-extension-pack
   visual-studio-code
   vlc
   vnc-viewer
