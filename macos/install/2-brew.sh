@@ -22,6 +22,8 @@ brewapps=(
   "broot"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
+  "docker"
+  "docker-machine"
   "dnscrypt-proxy"
   "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   "fish"
