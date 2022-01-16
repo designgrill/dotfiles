@@ -2,6 +2,9 @@
 
 # Get the remaining ones from Homebrew Cask
 brew tap homebrew/cask-versions
+# Let's get some fonts as well
+brew tap homebrew/cask-fonts
+
 
 brewcaskapps=(
   adobe-acrobat-reader
@@ -18,6 +21,7 @@ brewcaskapps=(
   fanny
   firefox
   flux
+  font-victor-mono
   google-backup-and-sync
   google-chrome
   google-cloud-sdk
@@ -35,9 +39,9 @@ brewcaskapps=(
   plex-media-server
   postico
   postman
+  rectangle
   skype
   sourcetree
-  spectacle
   teamviewer
   transmission
   vagrant
@@ -48,7 +52,7 @@ brewcaskapps=(
   vnc-viewer
   wireshark
   xquartz
-  zoomus
+  zoom
   zotero
 )
 
@@ -60,9 +64,9 @@ brewcaskappsinstall=()
 brewcaskappsupgrade=()
 
 for pkg in "${brewcaskapps[@]}"; do
-  if (brew cask outdated --greedy --quiet | grep -q "^${pkg%% *}\$"); then
+  if (brew outdated --casks --greedy --quiet | grep -q "^${pkg%% *}\$"); then
     brewcaskappsupgrade+=("$pkg")
-  elif ! (brew cask list -1 | grep -q "^${pkg%% *}\$"); then
+  elif ! (brew list --casks -1 | grep -q "^${pkg%% *}\$"); then
     brewcaskappsinstall+=("$pkg")
   fi
 done
@@ -72,7 +76,7 @@ if [ ${#brewcaskappsinstall[@]} -eq 0 ]; then
 else
   echo "⛳️ installing ${brewcaskappsinstall[*]}"
   for pkg in "${brewcaskappsinstall[@]}"; do
-    brew cask install --appdir="/Applications" "${pkg}"
+    brew install --casks --appdir="/Applications" "${pkg}"
   done
 fi
 
@@ -82,7 +86,7 @@ if [ ${#brewcaskappsupgrade[@]} -eq 0 ]; then
 else
   echo "⛳️ ugrading ${brewcaskappsupgrade[*]}"
   for pkg in "${brewcaskappsupgrade[@]}"; do
-    brew cask upgrade --appdir="/Applications" "${pkg}"
+    brew upgrade --casks --appdir="/Applications" "${pkg}"
   done
 fi
 
