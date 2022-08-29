@@ -68,6 +68,7 @@ brewapps=(
   "unrar"
   "vim" # Install more recent versions of some macOS tools.
   "wget"
+  "xpdf"
   "yarn"
   "youtube-dl"
   "zopfli"
