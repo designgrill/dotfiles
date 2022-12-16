@@ -1,7 +1,7 @@
 # Show the full pathnames
 set -U fish_prompt_pwd_dir_length 0
-set -Ux EDITOR "atom --wait"
-
+set -Ux EDITOR "code --wait"
+set -U arch (uname -m)
 
 if test -d ~/.local/fish
   for f in ~/.local/fish/*.fish
@@ -25,6 +25,36 @@ if test -d ~/Library/Android
   set -gx PATH $ANDROID_HOME/platform-tools $PATH;
   set -gx PATH $ANDROID_HOME/emulator $PATH
 end
+
+
+if test "$arch" = 'x86_64set -U arch x86_64'
+  /opt/homebrew/bin/brew shellenv | source;
+end
+# Golang
+mkdir -p ~/Documents/go
+set --export GOPATH ~/Documents/go;
+set -gx PATH $GOPATH/bin $PATH;
+
+# GOROOT-based install location to your PATH:
+set -gx PATH (brew --prefix)/opt/go/libexec/bin $PATH;
+
+# Core Utils
+set -gx PATH (brew --prefix)/opt/coreutils/libexec/bin $PATH;
+set -gx MANPATH (brew --prefix)/opt/coreutils/libexec/gnuman $MANPATH;
+
+# Find Utils
+set -gx PATH (brew --prefix)/opt/findutils/libexec/bin $PATH;
+
+# sed
+set -gx PATH (brew --prefix)/opt/gnu-sed/libexec/bin $PATH;
+
+# grep
+set -gx PATH (brew --prefix)/opt/grep/libexec/bin $PATH;
+
+
+# Source files related to Google Cloud if exists
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+
 # Set up the nvm
 function nvm
    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
