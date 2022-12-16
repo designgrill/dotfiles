@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:atom\x20\x2d\x2dwait
+SETUVAR --export EDITOR:code\x20\x2d\x2dwait
 SETUVAR --export NVM_DIR:/Users/anshul/\x2envm
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR fish_color_autosuggestion:brgreen

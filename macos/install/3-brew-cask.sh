@@ -10,7 +10,6 @@ brewcaskapps=(
   adobe-acrobat-reader
   android-studio
   anydesk
-  atom
   bitbar
   charles
   cheatsheet
