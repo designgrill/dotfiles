@@ -36,6 +36,9 @@ sudo pmset -a standbydelay 86400
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Enable Full Name of account in the menu bar
+defaults write NSGlobalDomain userMenuExtraStyle -int 0
+
 # Enable Airplay menu bar item
 defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.airplay' -bool true
 defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Displays.menu'
