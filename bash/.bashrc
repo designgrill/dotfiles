@@ -1,11 +1,16 @@
 # Lets figure out the OS for any OS specific stuff
 OS=$(uname -s)
+ARCH=$(uname -m)
 
 # Use atom as default editor
 export EDITOR='code --wait'
 
 #Path setup
 if [[ $OS == 'Darwin' ]]; then
+  if [[ $ARCH == 'arm64' ]]; then
+    # Set PATH, MANPATH, etc., for Homebrew.
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi;
   # Golang
   mkdir -p ~/Documents/go
   export GOPATH=~/Documents/go
@@ -73,8 +78,8 @@ fi;
 
 # nvm (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then

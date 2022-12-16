@@ -17,7 +17,7 @@ brewapps=(
   "aws-shell"
   "awscli"
   "bash-completion@2"
-  "bash" # Install Bash 4, don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
+  "bash" # Install Bash 4, don’t forget to add `$(brew --prefix)/bin/bash` to `/etc/shells` before running `chsh`.
   "brew-cask-completion"
   "broot"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -106,23 +106,23 @@ fi
 
 
 # Add brew-installed bash as one of the available shells
-# To set it as default, `chsh -s /usr/local/bin/bash`
-if ! grep -Fq '/usr/local/bin/bash' /etc/shells; then
+# To set it as default, `chsh -s $(brew --prefix)/bin/bash`
+if ! grep -Fq "$(brew --prefix)/bin/bash" /etc/shells; then
   echo "⛳️ adding newly installed bash to the available shells. Passsword might be needed."
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells;
 fi;
 
 # Add brew-installed fish as one of the available shells
-# To set it as default, `chsh -s /usr/local/bin/fish`
-if ! grep -Fq '/usr/local/bin/fish' /etc/shells; then
+# To set it as default, `chsh -s"$(brew --prefix)/bin/fish"
+if ! grep -Fq "$(brew --prefix)/bin/fish" /etc/shells; then
   echo "⛳️ adding newly installed fish to the available shells. Passsword might be needed."
-  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
+  echo "$(brew --prefix)/bin/fish" | sudo tee -a /etc/shells;
 fi;
 
 brew cleanup
 
 # Add google and cloudflare as the default DNS providers
-grep -q '^server_names' /usr/local/etc/dnscrypt-proxy.toml && sed -i '' 's/^server_names.*/server_names = ["google", "cloudflare"]/' /usr/local/etc/dnscrypt-proxy.toml || sed -i '' '/^# server_names.*/a\'$'\n''server_names = ["google", "cloudflare"]' /usr/local/etc/dnscrypt-proxy.toml
+grep -q '^server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^server_names.*/server_names = ["google", "cloudflare"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml || sed -i '' '/^# server_names.*/a\'$'\n''server_names = ["google", "cloudflare"]' $(brew --prefix)/etc/dnscrypt-proxy.toml"
 sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm

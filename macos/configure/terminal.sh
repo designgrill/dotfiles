@@ -55,4 +55,4 @@ EOD
 
 # Set the new bash as the default shell (or change it to be fish)
 echo "Changing your default shell to be fish"
-chsh -s /usr/local/bin/fish
+chsh -s "$(brew --prefix)/bin/fish"
