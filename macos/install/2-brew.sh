@@ -4,7 +4,7 @@
 # Install if we don't have it
 if test ! "$(which brew)"; then
   echo "Installing homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 brew update
@@ -40,6 +40,7 @@ brewapps=(
   "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
   "jq" # for json manipulation in commandline
   "lua"
+  "luarocks"
   "mas"
   "moreutils" # Install some other useful utilities like `sponge`.
   "mycli"
@@ -57,7 +58,6 @@ brewapps=(
   "rustup-init"
   "screen" # Install more recent versions of some macOS tools.
   "shellcheck"
-  "ssh-copy-id"
   "stow"
   "telnet"
   "terraform"
@@ -65,7 +65,6 @@ brewapps=(
   "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
-  "unrar"
   "vim" # Install more recent versions of some macOS tools.
   "wget"
   "xpdf"

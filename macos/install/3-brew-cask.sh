@@ -10,7 +10,6 @@ brewcaskapps=(
   adobe-acrobat-reader
   android-studio
   anydesk
-  bitbar
   charles
   cheatsheet
   cyberduck
@@ -50,6 +49,7 @@ brewcaskapps=(
   vlc
   vnc-viewer
   wireshark
+  xbar
   xquartz
   zoom
   zotero

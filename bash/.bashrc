@@ -21,6 +21,15 @@ if [[ $OS == 'Darwin' ]]; then
   export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 
+  # Find Utils
+  export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+
+  # sed
+  export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+
+  # grep
+  export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+
   # Android
   if [ -d ~/Library/Android ]; then
     export ANDROID=~/Library/Android;
@@ -62,8 +71,8 @@ shopt -s histverify
 
 # Get Bash Completion which gives auto completion for 100s of commands including git
 
-if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-  source "$(brew --prefix)/share/bash-completion/bash_completion";
+if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+  source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
 elif [ -f /etc/bash_completion ]; then
   source /etc/bash_completion;
 fi;
