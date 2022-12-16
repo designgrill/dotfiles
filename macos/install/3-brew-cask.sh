@@ -29,10 +29,10 @@ brewcaskapps=(
   itsycal
   java
   jetbrains-toolbox
+  macfuse
   metabase
   mysqlworkbench
   openemu
-  osxfuse
   plex
   plex-media-server
   postico
