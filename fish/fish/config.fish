@@ -3,6 +3,10 @@ set -U fish_prompt_pwd_dir_length 0
 set -Ux EDITOR "code --wait"
 set -U arch (uname -m)
 
+if test "$arch" = 'arm64'
+  /opt/homebrew/bin/brew shellenv | source;
+end
+
 if test -d ~/.local/fish
   for f in ~/.local/fish/*.fish
     source $f
@@ -27,9 +31,6 @@ if test -d ~/Library/Android
 end
 
 
-if test "$arch" = 'x86_64set -U arch x86_64'
-  /opt/homebrew/bin/brew shellenv | source;
-end
 # Golang
 mkdir -p ~/Documents/go
 set --export GOPATH ~/Documents/go;

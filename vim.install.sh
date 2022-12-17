@@ -16,5 +16,5 @@ curl -LSso "$DIR/vim/.vim/autoload/pathogen.vim" https://raw.github.com/tpope/vi
 if [ -d "$DIR/vim/.vim/bundle/vim-colors-solarized" ]; then
   git -C "$DIR/vim/.vim/bundle/vim-colors-solarized" pull
 else
-  git clone git://github.com/altercation/vim-colors-solarized.git "$DIR/vim/.vim/bundle/vim-colors-solarized"
+  git clone https://github.com/altercation/vim-colors-solarized.git "$DIR/vim/.vim/bundle/vim-colors-solarized"
 fi
