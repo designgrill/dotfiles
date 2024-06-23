@@ -30,6 +30,7 @@ brewcaskapps=(
   itsycal
   java
   jetbrains-toolbox
+  loom
   macfuse
   metabase
   mysqlworkbench
