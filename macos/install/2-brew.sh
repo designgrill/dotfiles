@@ -121,7 +121,7 @@ fi;
 brew cleanup
 
 # Add google and cloudflare as the default DNS providers
-grep -q '^server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^server_names.*/server_names = ["google", "cloudflare"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml" || sed -i '' '/^# server_names.*/ a\'$'\n' 'server_names = ["google", "cloudflare"]' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
+grep -Eq '^(#\s)?server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^(#\s)?server_names.*/server_names = ["google", "cloudflare"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
 sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm
