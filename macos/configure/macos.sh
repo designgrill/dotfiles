@@ -46,6 +46,10 @@ defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Libra
 # Enable Bluetooth menu bar item
 defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.bluetooth' -bool true
 defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'
+defaults write com.apple.controlcenter 'NSStatusItem Visible Bluetooth' -bool true
+
+# Enable Sound menu bar item
+defaults write com.apple.controlcenter 'NSStatusItem Visible Sound' -bool true
 
 # Set highlight color to green
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
