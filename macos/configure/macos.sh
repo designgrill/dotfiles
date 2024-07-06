@@ -469,6 +469,9 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 2
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Scroll up on a Dock icon to show all Space's opened windows for an app, or open stack.
+defaults write com.apple.dock "scroll-to-open" -bool "true"
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
