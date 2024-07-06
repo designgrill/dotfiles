@@ -30,9 +30,11 @@ brewcaskapps=(
   itsycal
   java
   jetbrains-toolbox
+  logi-options-plus
   loom
   macfuse
   metabase
+  microsoft-teams
   mysqlworkbench
   openemu
   plex
