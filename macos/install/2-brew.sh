@@ -69,7 +69,7 @@ brewapps=(
   "wget"
   "xpdf"
   "yarn"
-  "youtube-dl"
+  "yt-dlp"
   "zopfli"
 )
 
