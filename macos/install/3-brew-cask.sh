@@ -8,6 +8,7 @@ brew tap homebrew/cask-fonts
 
 brewcaskapps=(
   adobe-acrobat-reader
+affinity
   alt-tab
   android-studio
   anydesk
