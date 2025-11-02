@@ -8,7 +8,7 @@ brew tap homebrew/cask-fonts
 
 brewcaskapps=(
   adobe-acrobat-reader
-affinity
+  affinity
   alt-tab
   android-studio
   anydesk
@@ -25,7 +25,7 @@ affinity
   google-backup-and-sync
   google-chrome
   google-cloud-sdk
-  google-drive-file-stream
+  google-drive
   imagealpha
   imageoptim
   itsycal
