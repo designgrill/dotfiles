@@ -50,7 +50,7 @@ brewapps=(
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
   "proselint"
-    "qcachegrind"
+  "qcachegrind"
   "qpdf"
   "rbenv"
   "redis"
@@ -64,7 +64,7 @@ brewapps=(
   "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
-"uv"
+  "uv"
   "vim" # Install more recent versions of some macOS tools.
   "wget"
   "xpdf"
@@ -121,7 +121,7 @@ fi;
 brew cleanup
 
 # Add google and cloudflare as the default DNS providers
-grep -Eq '^(#\s)?server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^(#\s)?server_names.*/server_names = ["google", "cloudflare"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
+grep -Eq '^(#\s)?server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^(#\s)?server_names.*/server_names = ["cloudflare", "google"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
 sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm
