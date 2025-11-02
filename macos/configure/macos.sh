@@ -17,10 +17,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Anshul's MacBook Pro"
-sudo scutil --set HostName "Anshuls-MacBook-Pro"
-sudo scutil --set LocalHostName "Anshuls-MacBook-Pro"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Pro"
+sudo scutil --set ComputerName "Anshul's MacBook Air"
+sudo scutil --set HostName "Anshuls-MacBook-Air"
+sudo scutil --set LocalHostName "Anshuls-MacBook-Air"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Anshuls-MacBook-Air"
 
 # Interface Tweaks (additional - not from mths.be)
 defaults write -g AppleActionOnDoubleClick 'Maximize'
