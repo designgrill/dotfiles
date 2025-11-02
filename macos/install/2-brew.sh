@@ -50,8 +50,7 @@ brewapps=(
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
   "proselint"
-  "pyenv"
-  "qcachegrind"
+    "qcachegrind"
   "qpdf"
   "rbenv"
   "redis"
@@ -65,6 +64,7 @@ brewapps=(
   "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
+"uv"
   "vim" # Install more recent versions of some macOS tools.
   "wget"
   "xpdf"
