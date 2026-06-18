@@ -2,9 +2,16 @@
 
 # ~/.macos — https://mths.be/macos
 
-# Close any open System Preferences panes, to prevent them from overriding
+# NOTE (macOS 13+ / Tahoe): Several settings below write to TCC/SIP-protected
+# domains (loginwindow, universalaccess, windowserver, systemsetup, terminal).
+# `sudo` alone is no longer sufficient — the terminal app running this script
+# must be granted Full Disk Access under
+# System Settings → Privacy & Security → Full Disk Access, or those writes fail
+# silently.
+
+# Close any open System Settings panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
@@ -27,8 +34,8 @@ defaults write -g AppleActionOnDoubleClick 'Maximize'
 defaults write -g AppleInterfaceStyle 'Dark'
 
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# (Removed) `pmset standbydelay` is an Intel-era hibernation knob that is
+# ignored on Apple Silicon, which manages standby differently.
 
 # Disable the sound effects on boot
 #sudo nvram SystemAudioVolume=" "
@@ -36,16 +43,14 @@ sudo pmset -a standbydelay 86400
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 
-# Enable Full Name of account in the menu bar
-defaults write NSGlobalDomain userMenuExtraStyle -int 0
+# Menu bar items are managed by Control Center since Big Sur. The legacy
+# `com.apple.systemuiserver` "Menu Extras" (.menu bundles) were removed and are
+# no-ops on current macOS, so use the `com.apple.controlcenter` keys instead.
 
-# Enable Airplay menu bar item
-defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.airplay' -bool true
-defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Displays.menu'
+# Enable Displays / AirPlay menu bar item
+defaults write com.apple.controlcenter 'NSStatusItem Visible Display' -bool true
 
 # Enable Bluetooth menu bar item
-defaults write 'com.apple.systemuiserver' 'NSStatusItem Visible com.apple.menuextra.bluetooth' -bool true
-defaults write 'com.apple.systemuiserver' 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/Bluetooth.menu'
 defaults write com.apple.controlcenter 'NSStatusItem Visible Bluetooth' -bool true
 
 # Enable Sound menu bar item
@@ -183,8 +188,8 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Disable “natural” (Lion-style) scrolling
 #defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# (Removed) The Bluetooth Bitpool tweak targeted the legacy SBC codec and has
+# been ignored for years; modern Bluetooth audio uses AAC and others.
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -408,11 +413,7 @@ defaults write com.apple.dock persistent-apps -array
 # (i.e. use the old Exposé behavior instead)
 #defaults write com.apple.dock expose-group-by-app -bool false
 
-# Disable Dashboard
-#defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-#defaults write com.apple.dock dashboard-in-overlay -bool true
+# (Removed) Dashboard was removed in macOS Catalina (10.15); its keys are dead.
 
 # Don’t automatically rearrange Spaces based on most recent use
 #defaults write com.apple.dock mru-spaces -bool false
@@ -693,8 +694,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Enable the debug menu in Address Book
 defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
-# Enable Dashboard dev mode (allows keeping widgets on the desktop)
-defaults write com.apple.dashboard devmode -bool true
+# (Removed) Dashboard dev mode — Dashboard was removed in Catalina (10.15).
 
 # Enable the debug menu in iCal (pre-10.8)
 defaults write com.apple.iCal IncludeDebugMenu -bool true
