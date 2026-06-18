@@ -10,54 +10,58 @@ brewcaskapps=(
   adobe-acrobat-reader
   affinity
   alt-tab
+  android-platform-tools
   android-studio
+  antigravity
+  antigravity-cli
+  antigravity-ide
   anydesk
+  anythingllm
   charles
+  chatgpt
   cheatsheet
+  claude
+  claude-code
+  codex
+  cursor
   cyberduck
   diffmerge
-  docker
   dropbox
   fanny
   firefox
   flux
   font-victor-mono
-  google-backup-and-sync
+  gcloud-cli
   google-chrome
   google-cloud-sdk
   google-drive
   imagealpha
   imageoptim
   itsycal
-  java
   jetbrains-toolbox
-  logi-options-plus
-  loom
+  kiro
+  logi-options+
   macfuse
-  metabase
   microsoft-teams
-  mysqlworkbench
+  mounty
   openemu
+  openjdk
   plex
   plex-media-server
   postico
   postman
   rectangle
-  skype
   sourcetree
   teamviewer
-  transmission
   vagrant
-  virtualbox
-  virtualbox-extension-pack
   visual-studio-code
   vlc
   vnc-viewer
-  wireshark
+  wireshark-app
   xbar
   xquartz
+  zed
   zoom
-  zotero
 )
 
 brewcaskapps+=(

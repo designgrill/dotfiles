@@ -23,6 +23,7 @@ brewapps=(
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   "csshx"
   "docker"
+  "docker-completion"
   "docker-machine"
   "dnscrypt-proxy"
   "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
@@ -47,6 +48,7 @@ brewapps=(
   "mysql"
   "node"
   "nvm"
+  "ollama"
   "openssh" # Install more recent versions of some macOS tools.
   "pandoc"
   "proselint"
@@ -61,7 +63,6 @@ brewapps=(
   "telnet"
   "terraform"
   "tcptraceroute"
-  "the_silver_searcher" # ag — Silver Searcher
   "tldr"
   "tree"
   "uv"
