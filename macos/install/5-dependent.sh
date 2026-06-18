@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# These 2 brew packages are dependent on osxfuse brew cask package
+# These 2 brew packages depend on the macfuse cask (formerly osxfuse). On Apple
+# Silicon, macFUSE needs its kernel extension approved in System Settings,
+# followed by a reboot, before these will work.
 brewapps=(
   "ntfs-3g"
   "sshfs"

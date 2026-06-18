@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# Get the remaining ones from Homebrew Cask
-brew tap homebrew/cask-versions
-# Let's get some fonts as well
-brew tap homebrew/cask-fonts
-
+# Get the remaining ones from Homebrew Cask.
+# Note: homebrew/cask-versions and homebrew/cask-fonts were merged into the main
+# homebrew/cask tap in 2024, so no extra taps are needed (fonts included).
 
 brewcaskapps=(
   adobe-acrobat-reader
@@ -33,7 +31,6 @@ brewcaskapps=(
   font-victor-mono
   gcloud-cli
   google-chrome
-  google-cloud-sdk
   google-drive
   imagealpha
   imageoptim
@@ -98,15 +95,12 @@ else
   done
 fi
 
-echo "⛳️ installing Python Language Server for code editor like Atom"
-pip3 install python-language-server --user
-
 echo "⛳️ installing Google App Engine Python support"
-if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.bash.inc"
 fi;
-if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+if which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.bash.inc"
 fi;
 gcloud components install app-engine-python
 gcloud components install app-engine-python-extras

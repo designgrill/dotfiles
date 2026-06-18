@@ -13,7 +13,6 @@ brewapps=(
   # update the shell files to ensure the gnu version of some packages are available
   # check out https://github.com/fabiomaia/linuxify/blob/master/.linuxify
   "automake"
-  "aws-google-auth"
   "aws-shell"
   "awscli"
   "bash-completion@2"
@@ -21,10 +20,11 @@ brewapps=(
   "brew-cask-completion"
   "broot"
   "coreutils" # Install GNU core utilities (those that come with macOS are outdated), Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+  "colima" # Lightweight Linux VM that runs the Docker daemon for the `docker` CLI.
   "csshx"
   "docker"
   "docker-completion"
-  "docker-machine"
+  "docker-compose" # Compose plugin; bundled with Docker Desktop but not the CLI formula.
   "dnscrypt-proxy"
   "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   "fish"
@@ -36,9 +36,9 @@ brewapps=(
   "gnu-sed" # Install GNU `sed`, overwriting the built-in `sed`.
   "gnupg"
   "go"
+  "gh" # GitHub CLI; replaces the deprecated `hub`.
   "grep" # Install more recent versions of some macOS tools.
   "httpie"
-  "hub" # github util. gotta love `hub fork`, `hub create`, `hub checkout <PRurl>`
   "jq" # for json manipulation in commandline
   "lua"
   "luarocks"
@@ -122,7 +122,7 @@ fi;
 brew cleanup
 
 # Add google and cloudflare as the default DNS providers
-grep -Eq '^(#\s)?server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -i '' 's/^(#\s)?server_names.*/server_names = ["cloudflare", "google"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
+grep -Eq '^#? *server_names' "$(brew --prefix)/etc/dnscrypt-proxy.toml" && sed -E -i '' 's/^#? *server_names.*/server_names = ["cloudflare", "google"]/' "$(brew --prefix)/etc/dnscrypt-proxy.toml"
 sudo brew services start dnscrypt-proxy
 
 # Set the directory to keep binaries for nvm

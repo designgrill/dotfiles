@@ -9,6 +9,6 @@ sudo softwareupdate -ir --verbose
 ARCH=$(uname -m)
 if [[ $ARCH == 'arm64' ]]; then
   # Install Rosetta as some software need it
-  sudo softwareupdate --install-rosetta
+  sudo softwareupdate --install-rosetta --agree-to-license
 fi;
 
