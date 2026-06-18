@@ -7,8 +7,8 @@ READ THE INSTRUCTIONS SPECIFIC TO YOUR MACHINE TYPE IN RESPECTIVE FOLDER
 ### Step By Step
 0. Download the zip of this repo so that you can run few scripts.
 0. Go to `macos/install` or similar and run the scripts as needed. You will need to run this only once per machine.
-0. Run spectacle so that its settings can be applied in the next step.
-0. Add [dnscrypt-proxy plugin](https://getbitbar.com/plugins/Network/dnscrypt-proxy-switcher.10s.sh) to bitbar in Menu Bar.
+0. Run Rectangle so that its settings can be applied in the next step.
+0. Add the dnscrypt-proxy switcher plugin to xbar in the Menu Bar.
 0. Go to `macos/configure` or similar and run the scripts as needed. `macos.sh` might be the first one if you are running for macOS. Per user.
 0. Setup the .ssh and other private home folders so that you can clone this repo and use that for symlinking.
 0. Clone this repo
@@ -32,19 +32,9 @@ cd aws/
 stow cli -t ~/.aws/cli/ -v --ignore=.DS_Store
 ```
 0. `~/.config/fish/fish_variables` might be overwritten by fish time and again, you might have to keep syncing.
-0. Install all atom plugins
-```
-apm login
-apm stars --install
-```
 0. For Rectangle, import the config file from `macos/configure`
 0. For OpenEmu, you need to select the USB gamepad in the controls section and map ALL the buttons one by one. Delete `"~/Library/Application Support/OpenEmu/Bindings/Default.oebindings"` if the USB game controllers are not working in OpenEmu. Also, you have to configure each and every button for it to work properly, and not just select the correct game pad.
 0. For chrome extensions which you are using from Github, take a git checkout in`/Applications/From Github` folder and use from there. This is to ensure you can update them with a simple command when needed.
-0. For BitBar extensions, create a `/Applications/From BitBar` folder and use that as a plugin directory.
-
-## Exclusions
-* Atom settings are synced using the `sync-settings` package which depends on github's gists.
-* `sync-settings` package for Atom may not sync language specific settings like gfm soft wrap.
 
 ## ToDo
 * Most of the Ubuntu options as they haven't been tested yet

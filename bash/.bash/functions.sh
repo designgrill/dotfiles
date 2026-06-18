@@ -24,5 +24,5 @@ youtubeslice() {
   # 3 - duration
   # 4 - filename
   # 5 - format [18,22]
-  ffmpeg -ss $2 -i $(youtube-dl -f $5 --get-url $1) -t $3 -c:v copy -c:a copy $4.mp4
+  ffmpeg -ss $2 -i $(yt-dlp -f $5 --get-url $1) -t $3 -c:v copy -c:a copy $4.mp4
 }

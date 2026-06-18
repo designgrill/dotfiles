@@ -2,7 +2,7 @@
 OS=$(uname -s)
 ARCH=$(uname -m)
 
-# Use atom as default editor
+# Use VS Code as default editor
 export EDITOR='code --wait'
 
 #Path setup
@@ -78,11 +78,11 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Source files related to Google Cloud if exists
-if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.bash.inc"
 fi;
-if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+if [[ $OS == 'Darwin' ]] && which brew > /dev/null && [ -f "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.bash.inc" ]; then
+  source "$(brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/completion.bash.inc"
 fi;
 
 # nvm (Node Version Manager)

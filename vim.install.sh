@@ -12,7 +12,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Vim Settings
 mkdir -p "$DIR/vim/.vim/autoload"
-curl -LSso "$DIR/vim/.vim/autoload/pathogen.vim" https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+curl -LSso "$DIR/vim/.vim/autoload/pathogen.vim" https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 if [ -d "$DIR/vim/.vim/bundle/vim-colors-solarized" ]; then
   git -C "$DIR/vim/.vim/bundle/vim-colors-solarized" pull
 else

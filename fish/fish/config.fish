@@ -14,9 +14,10 @@ if test -d ~/.local/fish
 end
 
 # Install fisher
+# Note: the old https://git.io/fisher short link is deprecated; use the canonical URL.
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    curl https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
 
@@ -40,21 +41,22 @@ set -gx PATH $GOPATH/bin $PATH;
 set -gx PATH (brew --prefix)/opt/go/libexec/bin $PATH;
 
 # Core Utils
-set -gx PATH (brew --prefix)/opt/coreutils/libexec/bin $PATH;
+set -gx PATH (brew --prefix)/opt/coreutils/libexec/gnubin $PATH;
 set -gx MANPATH (brew --prefix)/opt/coreutils/libexec/gnuman $MANPATH;
 
 # Find Utils
-set -gx PATH (brew --prefix)/opt/findutils/libexec/bin $PATH;
+set -gx PATH (brew --prefix)/opt/findutils/libexec/gnubin $PATH;
 
 # sed
-set -gx PATH (brew --prefix)/opt/gnu-sed/libexec/bin $PATH;
+set -gx PATH (brew --prefix)/opt/gnu-sed/libexec/gnubin $PATH;
 
 # grep
-set -gx PATH (brew --prefix)/opt/grep/libexec/bin $PATH;
+set -gx PATH (brew --prefix)/opt/grep/libexec/gnubin $PATH;
 
 
 # Source files related to Google Cloud if exists
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+set -l gcloud_inc (brew --prefix)/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.fish.inc
+test -f $gcloud_inc; and source $gcloud_inc
 
 # Set up the nvm
 function nvm
