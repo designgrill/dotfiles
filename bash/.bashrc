@@ -62,6 +62,9 @@ shopt -s histappend
 export HISTSIZE=
 export HISTFILESIZE=
 
+export HISTFILE="$HOME/.local/share/bash/bash_history"
+mkdir -p "$(dirname "$HISTFILE")"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
