@@ -23,7 +23,6 @@ stow others -t ~/ -v --ignore=.DS_Store    # will configure lot of other smaller
 ./vim.install.sh
 stow vim -t ~/ -v --ignore=.DS_Store       # will configure vim. Run `./vim.install.sh` before that.
 
-mkdir -p ~/.config/fish
 mkdir -p ~/.config/git
 stow .config -t ~/.config/ -v --ignore=.DS_Store
 
