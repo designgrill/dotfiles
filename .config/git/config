@@ -1,8 +1,7 @@
 [include]
-  path = ~/.gitconfig.global
-  path = ~/.gitalias
+  path = config.global
+  path = alias
 [core]
-  excludesfile = ~/.gitignore.global
   ignorecase = true
 [push]
   default = simple

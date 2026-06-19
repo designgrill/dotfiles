@@ -134,4 +134,6 @@ rustup completions bash > "$(brew --prefix)/etc/bash_completion.d/rustup.bash-co
 # fish comes with basic ruustup completion by default
 
 # Add git aliases
-curl -LSso ~/.gitalias https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt
+mkdir -p ~/.config/fish
+mkdir -p ~/.config/git
+curl -LSso ~/.config/git/alias https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt

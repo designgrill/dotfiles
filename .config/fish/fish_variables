@@ -1,0 +1,11 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:code\x20\x2d\x2dwait
+SETUVAR --export NVM_DIR:/Users/branch/\x2envm
+SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR arch:arm64
+SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
+SETUVAR fish_prompt_pwd_dir_length:0
+SETUVAR fish_user_paths:/Users/branch/\x2ecargo/bin
