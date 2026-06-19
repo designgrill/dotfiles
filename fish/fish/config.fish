@@ -83,3 +83,7 @@ end
 
 # aliases
 alias g='git'
+
+if test -f ~/.dircolors
+    eval (dircolors -c ~/.dircolors)
+end
