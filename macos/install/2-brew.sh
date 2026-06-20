@@ -63,6 +63,7 @@ brewapps=(
   "telnet"
   "terraform"
   "tcptraceroute"
+  "tig"
   "tldr"
   "tree"
   "uv"
