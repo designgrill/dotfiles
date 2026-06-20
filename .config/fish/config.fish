@@ -84,6 +84,12 @@ end
 # aliases
 alias g='git'
 
+# ls colors
 if test -f ~/.dircolors
     eval (dircolors -c ~/.dircolors)
 end
+
+# terminal colors changes
+set fish_color_option brcyan
+set fish_color_command blue
+set fish_color_autosuggestion black
