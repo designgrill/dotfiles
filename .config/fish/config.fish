@@ -7,12 +7,6 @@ if test "$arch" = 'arm64'
   /opt/homebrew/bin/brew shellenv | source;
 end
 
-if test -d ~/.local/fish
-  for f in ~/.local/fish/*.fish
-    source $f
-  end
-end
-
 # Install fisher
 # Note: the old https://git.io/fisher short link is deprecated; use the canonical URL.
 if not functions -q fisher
@@ -88,8 +82,3 @@ alias g='git'
 if test -f ~/.dircolors
     eval (dircolors -c ~/.dircolors)
 end
-
-# terminal colors changes
-set fish_color_option brcyan
-set fish_color_command blue
-set fish_color_autosuggestion black
