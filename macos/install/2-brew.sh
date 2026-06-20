@@ -128,12 +128,6 @@ sudo brew services start dnscrypt-proxy
 # Set the directory to keep binaries for nvm
 mkdir -p ~/.nvm
 
-# Set up rust
-rustup-init -y
-rustup completions bash > "$(brew --prefix)/etc/bash_completion.d/rustup.bash-completion"
-# fish comes with basic ruustup completion by default
-
 # Add git aliases
-mkdir -p ~/.config/fish
 mkdir -p ~/.config/git
 curl -LSso ~/.config/git/alias https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt
