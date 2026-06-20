@@ -1,0 +1,5 @@
+abbr --add g 'git'
+abbr --add gpr 'git pull --rebase=merges'
+abbr --add gpf 'git push --force-with-lease'
+abbr --add gbc 'git switch -c'
+abbr --add gbs 'git switch'

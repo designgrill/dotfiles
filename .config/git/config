@@ -5,6 +5,7 @@
   ignorecase = true
 [push]
   default = simple
+  autoSetupRemote = true
 [merge]
   tool = diffmerge
 [mergetool "diffmerge"]
