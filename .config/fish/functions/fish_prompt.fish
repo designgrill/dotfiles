@@ -11,7 +11,6 @@ function fish_prompt
   if not set -q __fish_git_prompt_showupstream
       set -g __fish_git_prompt_showupstream "informative"
   end
-
   # Git stuff ends here
 
   set_color cyan
@@ -32,7 +31,7 @@ function fish_prompt
   end
 
   set_color red
-  printf '%s ' (__fish_vcs_prompt)
+  printf '%s ' (fish_vcs_prompt)
   set_color normal
 
 
